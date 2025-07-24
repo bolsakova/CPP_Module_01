@@ -6,13 +6,14 @@
 
 class Zombie {
 private:
-	// int N;
 	std::string name; // приватный атрибут
 
 public:
-	void announce( void );		// метод для объявления зомби
-	Zombie(std::string name );	// конструктор - создание зомби
-	~Zombie(void);				// деструктор - для вывода отладочного сообщения
+	void announce( void );				// метод для объявления зомби
+	void setName(std::string name);		// метод для установки имени
+	Zombie();							// конструктор - для создания массива со всеми зомби
+	Zombie(std::string name );			// конструктор - создание отдельного зомби с именем
+	~Zombie(void);						// деструктор - для вывода отладочного сообщения
 }; 
 
 Zombie* zombieHorde( int N, std::string name );
