@@ -4,12 +4,14 @@
 #include <string>
 #include <iostream>
 
+// базовый класс оружия
 class Weapon {
 private:
 	std::string type;	// приватный атрибут
 public:
-	std::string& getType();	// возвращает константную ссылку на type
-	std::string setType(std::string newType);	// устанавливает новое значение
+	Weapon(std::string type);	// конструктор для создания оружия с типом
+	const std::string& getType();	// возвращает константную ссылку на type
+	void setType(std::string newType);	// устанавливает новое значение
 };
 
 #endif
