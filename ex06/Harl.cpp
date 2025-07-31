@@ -20,33 +20,6 @@ void Harl::error( void ) {
 	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-void Harl::complain( std::string level ) {
-	// массив указателей на методы
-	void (Harl::*methods[])(void) = {
-		&Harl::debug,
-		&Harl::info,
-		&Harl::warning,
-		&Harl::error
-	};
-	// массив соответствующих уровней
-	std::string levels[] = {
-		"DEBUG",
-		"INFO",
-		"WARNING",
-		"ERROR"
-	};
-	// поиск соответствия и вызов нужного метода
-	for (int i = 0; i < 4; i++) {
-		if (levels[i] == level) {	// нашли соответствие
-			// вызов метода через указатель с тем же индексом
-			(this->*methods[i])();
-			return;
-		}
-	}
-	// если уровень не найден
-	std::cout << "Unknown level: " << level << std::endl;
-}
-
 void Harl::filter( std::string level ) {
 	// функция для получения индекса уровня
 	int getLevel = -1;
