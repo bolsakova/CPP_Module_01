@@ -1,4 +1,4 @@
-NAME = file_copy
+NAME = replace
 
 CXX = g++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++17
@@ -13,7 +13,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp # Zombie.hpp
+%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
