@@ -5,7 +5,7 @@
 int main() {
 	Harl harl;
 
-	std::cout << "=== Testing Harl complaints ===" << std::endl;
+	std::cout << "=== Testing Harl complaints ===" << std::endl << std::endl;
 
 	harl.complain("DEBUG");
 	std::cout << std::endl;
