@@ -168,4 +168,34 @@ methods[i]	: указатель на нужный метод
 ()			: вызов метода
 (void)		: параметры метода
 
+==================
+ SWITCH STATEMENT
+==================
+	- конструкция для выбора одного из множества вариантов на основе      	значения переменной.
 
+1. Базовый синтаксис:
+	switch (variable) {
+		case VALUE1:
+			// код для VALUE1
+			break;
+		case VALUE2:
+			// код для VALUE2
+			break;
+		default:
+			// код по умолчанию
+			break;
+	}
+2. Особенность switch - "fall through":
+	switch (level) {
+		case 1:
+			std::cout << "Level 1" << std::endl;
+			// НЕТ break! - выполнение продолжится вниз
+		case 2:
+			std::cout << "Level 2" << std::endl;
+			break;
+		case 3:
+			std::cout << "Level 3" << std::endl;
+			break;
+	}
+3. Проблема:
+	- switch работает только с числами, не со строками
